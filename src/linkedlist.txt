@@ -1,0 +1,46 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct list_s {
+    int n;
+    struct list_s *next;
+} list_t;
+list_t *add_node(list_t **head, int n);
+size_t print_list(const list_t *h);
+
+int main() {
+    // Write C code here
+    list_t *head = NULL;
+    add_node(&head,1);
+    add_node(&head, 2);
+    print_list(head);
+
+
+    return 0;
+}
+
+list_t* add_node(list_t**head, int n){
+    list_t *new_node = malloc(sizeof(list_t));
+    if(new_node == NULL){
+        return NULL;
+    }
+    new_node->next = *head;
+    new_node->n = n;
+    *head = new_node;
+    return (*head);
+}
+size_t print_list(const list_t *h)
+{
+	size_t i;
+
+	i = 0;
+	while (h != NULL)
+	{
+		printf("[%d]", h->n );
+
+		h = h->next;
+		i++;
+	}
+	return (i);
+}
