@@ -4,6 +4,10 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.print("Eid Mubarak!");
+        Test newTest = new Test(5);
+        Test shape = new Test(10);
+        shape.draw();
+        newTest.display();
 
 
 
