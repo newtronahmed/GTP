@@ -2,6 +2,14 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        Vehicle newTest1 = new Test();
+        newTest1.drive();
+        ((Test) newTest1).drive(3);
+//        Test newTest = new Test();
+//        Test newTest2 = new Test();
+
+
+//        System.out.println(Test.getCount());
 
         System.out.print("Eid Mubarak!");
 

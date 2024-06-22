@@ -2,7 +2,7 @@ package LinkedList;
 
 public class Node {
     int val;
-    Node next;
+    NodeStack next;
 
     public Node (int val){
         this.val = val;
